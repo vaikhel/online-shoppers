@@ -14,7 +14,9 @@ Predicting whether a user will make a purchase during an online session.
 online-shoppers/
 ├── data/
 ├── notebooks/
+│   └── eda.ipynb
 ├── src/
+│   └── preprocessing.py
 ├── requirements.txt
 └── README.md
 ```
