@@ -14,9 +14,16 @@ Predicting whether a user will make a purchase during an online session.
 online-shoppers/
 ├── data/
 ├── notebooks/
-│   └── eda.ipynb
+│   ├── eda.ipynb
+│   └── modeling.ipynb
 ├── src/
-│   └── preprocessing.py
+│   ├── preprocessing.py
+│   ├── models.py
+│   └── evaluation.py
 ├── requirements.txt
 └── README.md
 ```
+
+## Models
+- Logistic Regression
+- Decision Tree
