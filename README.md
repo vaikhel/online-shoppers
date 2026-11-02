@@ -27,3 +27,4 @@ online-shoppers/
 ## Models
 - Logistic Regression
 - Decision Tree
+- MLP
