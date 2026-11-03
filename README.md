@@ -27,5 +27,24 @@ online-shoppers/
 ## Models
 - Logistic Regression
 - Decision Tree
-- MLP
+- MLP (PyTorch)
 - CatBoost
+
+## Results
+
+CatBoost showed the best performance.
+
+| Model              | Accuracy | F1-Score | ROC-AUC |
+|--------------------|----------|----------|---------|
+| CatBoost (test)    | 0.89     | 0.67     | 0.92    |
+
+## Key Findings
+- CatBoost achieved the highest F1-score and strong ROC-AUC
+- Cross-validation results were consistent with the test set
+- Class imbalance was handled with `class_weight` / `auto_class_weights`
+
+## How to Run
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
