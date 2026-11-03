@@ -10,6 +10,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.compose import ColumnTransformer
 
+from catboost import CatBoostClassifier
+
 from src.preprocessing import get_preprocessor
 
 def train_logistic_regression(
@@ -126,3 +128,26 @@ def train_mlp(
             optimizer.step()
 
     return MLPWrapper(model, preprocessor)
+
+def train_catboost(
+    X_train: pd.DataFrame,
+    y_train: pd.Series,
+    categorical_features: list
+) -> CatBoostClassifier:
+    """Train CatBoost (handles categoricals natively)."""
+    model = CatBoostClassifier(
+        iterations=1000,
+        learning_rate=0.1,
+        depth=6,
+        random_state=42,
+        verbose=0,
+        auto_class_weights="Balanced"
+    )
+
+    model.fit(
+        X_train,
+        y_train,
+        cat_features=categorical_features
+    )
+
+    return model

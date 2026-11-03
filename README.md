@@ -28,3 +28,4 @@ online-shoppers/
 - Logistic Regression
 - Decision Tree
 - MLP
+- CatBoost
